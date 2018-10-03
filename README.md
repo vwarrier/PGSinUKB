@@ -14,7 +14,7 @@ and run a seperate regression as and when needed.
 
 for i in {1..22}; do ./plink --bfile ukbchr${i} --exclude UKB2_autosomes-merge.missnp --make-bed --out ukbchr_v2_${i}; done
 
-./plink --bfile ukbchr_v2_1 --merge-list bmergfile2.txt --make-bed --out UKB2_autosomes
+./plink --bfile ukbchr_v2_1 --merge-list bmerg2.txt --make-bed --out UKB2_autosomes
 
 ./plink --bfile UKB2_autosomes --extract snpextractfile.txt --make-bed --out UKB2_prsicefile
 
