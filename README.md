@@ -6,8 +6,19 @@ Please follow the UKB file to download the data and do some basic QC. We will ge
 and run a seperate regression as and when needed. 
 
 
-# Step 1: Create a merged bfile with all autosomes
+## Step 1: Create a merged bfile with all autosomes
 
+```bash
+
+./plink --bfile ukbchr1 --merge-list bmergfile.txt --extract snpextractfile.txt --make-bed --out UKB2_autosomes
+
+for i in {1..22}; do ./plink --bfile ukbchr${i} --exclude UKB2_autosomes-merge.missnp --make-bed --out ukbchr_v2_${i}; done
+
+./plink --bfile ukbchr_v2_1 --merge-list bmergfile2.txt --make-bed --out UKB2_autosomes
+
+./plink --bfile UKB2_autosomes --extract snpextractfile.txt --make-bed --out UKB2_prsicefile
+
+```
 
 
 
