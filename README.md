@@ -5,9 +5,19 @@ This is a script to generate a PGS file in the UKB
 Please follow the UKB file to download the data and do some basic QC. We will generate PGS using PRSice2, save the polygenic scores 
 and run a seperate regression as and when needed. 
 
+
+## Documents to read
+Please read the following documents:
+
+1. Genotype data: https://biobank.ctsu.ox.ac.uk/crystal/crystal/docs/ukbgene_instruct.html
+2. WES data: https://www.ukbiobank.ac.uk/wp-content/uploads/2019/08/UKB-50k-Exome-Sequencing-Data-Release-July-2019-FAQs.pdf
+
+I have currently downloaded only the joint called files for WES. Why is joint call better than sample-level calling? https://gatkforums.broadinstitute.org/gatk/discussion/3686/why-do-joint-calling-rather-than-single-sample-calling-retired
+
+
 ## Step 1: Dowloading files from the UKB
 
-First, read this file for downloading UKB files: http://biobank.ctsu.ox.ac.uk/crystal/label.cgi?id=100314
+Have a look at this to understand genomic files available: http://biobank.ctsu.ox.ac.uk/crystal/label.cgi?id=100314
 
 Ensure the key is downloaded in the file and saved as .ukbkey
 
