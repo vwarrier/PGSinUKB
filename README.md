@@ -14,8 +14,8 @@ Ensure the key is downloaded in the file and saved as .ukbkey
 The scripts below help you download the genetics file
 
 ```bash
+## genotype data
 for i in {1..22}; do ./ukbgene imp -c$i; done  #this downloads the BGEN files
-
 for i in {1..22}; do ./ukbgene imp -m -c$i; done
 
 ./ukbgene imp -cX
@@ -23,6 +23,9 @@ for i in {1..22}; do ./ukbgene imp -m -c$i; done
 
 ./ukbgene imp -m -cX
 ./ukbgene imp -m -cXY
+
+##whole exome data
+for i in {1..22}; do ./ukbgene efe -c$i; done
 ```
 
 To download the phenotypic file, please see the email you have, and download the file and save it in the R format. 
