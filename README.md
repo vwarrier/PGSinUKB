@@ -14,6 +14,8 @@ Please read the following documents:
 
 I have currently downloaded only the joint called files for WES. Why is joint call better than sample-level calling? https://gatkforums.broadinstitute.org/gatk/discussion/3686/why-do-joint-calling-rather-than-single-sample-calling-retired
 
+Please note, the variant calls are not good at all for the downloaded UKB data. 
+
 
 ## Step 1: Dowloading files from the UKB
 
