@@ -45,8 +45,10 @@ To download the phenotypic file, please see the email you have, and download the
 
 ## Step 2: Converting BGEN to plink files
 
+To run this command, let's first identify people who belong to British European subset 22006 (https://biobank.ndph.ox.ac.uk/showcase/field.cgi?id=22006), subset it to that and then run all the commands (both maf and hwe are sensitive to genetic grouping).
+
 ```bash
-for i in {1..21}; do ./plink2 --bgen ukb_imp_chr${i}_v3.bgen --sample ukb20904_imp_chr${i}_v3_s487334.sample --make-bed -out ukbchr${i} --maf 0.01 --geno 0.05 --threads 10 --hwe 0.000001 --mind 0.05; done
+for i in {1..21}; do ./plink2 --bgen ukb_imp_chr${i}_v3.bgen --sample ukb20904_imp_chr${i}_v3_s487334.sample --keep europeansonlyfile --make-bed -out ukbchr${i} --maf 0.01 --geno 0.05 --threads 10 --hwe 0.000001 --mind 0.05; done
 
 ```
 
